@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native'
-import { Loading } from '.'
 
 export const styles = StyleSheet.create({
     loading: {
