@@ -9,4 +9,7 @@ export const styles = StyleSheet.create({
         borderRadius: 7,
         gap: 7,
     },
+    name: {
+
+    },
 })
