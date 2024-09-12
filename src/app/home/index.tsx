@@ -58,6 +58,7 @@ export function Home() {
                     return acc
                 }, [])           
                 setContacts(list)
+                setContact(data[0])
                 }
         } catch(error) {
             console.log(error)
@@ -108,7 +109,7 @@ export function Home() {
                         {
                             contact.phoneNumbers && (
                             <View style={styles.phone}>
-                                <Feather name="phone" size={18} color={theme.colors.blue}></Feather>
+                                <Feather name="phone" size={18} color={theme.colors.gray_400}></Feather>
                                 <Text style={styles.phoneNumber}>{contact.phoneNumbers[0].number}</Text>
                             </View>
                             )
