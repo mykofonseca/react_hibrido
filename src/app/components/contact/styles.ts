@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
         marginLeft: 15,
     },
     name: {
-        fontFamily: theme.fontFamily.medium
+        fontFamily: theme.fontFamily.medium,
+        fontSize: 18,
     },
 })

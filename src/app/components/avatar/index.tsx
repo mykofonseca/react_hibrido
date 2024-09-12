@@ -9,14 +9,14 @@ const variants = {
     text: {
         medium: {fontSize: 24},
         large: {fontSize: 52},
-    }
+    },
 }
 
 type Props = {
     name: string
     image?: ImageProps | null
     variant?: "medium" | "large"
-    containerStyle: StyleProp<ViewStyle>
+    containerStyle?: StyleProp<ViewStyle>
 }
 
 export function Avatar({ image, name, variant="medium", containerStyle }: Props){

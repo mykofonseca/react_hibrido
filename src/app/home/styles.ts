@@ -34,7 +34,7 @@ export const styles =  StyleSheet.create({
         margin: 12,
     },
     contentList: {
-
+        gap: 10,
     },
     bottomSheetContent: {
         flex: 1,
@@ -58,7 +58,9 @@ export const styles =  StyleSheet.create({
         color: theme.colors.gray_400,
     },
     phone: {
-
+        marginBottom: 25,
+        gap: 10,
+        flexDirection: "row",
     },
     image: {
         marginBottom: -50,

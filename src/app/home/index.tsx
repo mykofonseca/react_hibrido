@@ -12,6 +12,7 @@ import { Input } from '@/app/components/input'
 import { Contact, ContactProps } from '@/app/components/contact'
 import { Avatar } from '../components/avatar'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import { Button } from '../buttom'
 
 type SectionListDataProps = {
     title: string
@@ -51,7 +52,7 @@ export function Home() {
 
                     if(existingEntry){
                         existingEntry.data.push(item)
-                    }else{
+                    } else {
                         acc.push({title: firstLetter, data: [item]})
                     }
 
@@ -99,21 +100,21 @@ export function Home() {
                 {
                     contact &&
                     <BottomSheet ref={bottomSheetRef} 
-                        snapPoints={[1, 284]}
-                        handleComponent={() => null}
-                        backgroundStyle={styles.bottomSheet}
-                        >
-                        <Avatar name={contact.name} image={contact.image} variant='large' />
-                        <View style={styles.bottomSheetContent}>
-                            <Text style={styles.contactName}>{contact.name}</Text>
+                    snapPoints={[1, 284]}
+                    handleComponent={() => null}
+                    backgroundStyle={styles.bottomSheet}>
+                        <Avatar name={contact.name} image={contact.image} variant='large' containerStyle={styles.image} />
+                            <View style={styles.bottomSheetContent}>
+                                <Text style={styles.contactName}>{contact.name}</Text>
                         {
                             contact.phoneNumbers && (
-                            <View style={styles.phone}>
-                                <Feather name="phone" size={18} color={theme.colors.gray_400}></Feather>
-                                <Text style={styles.phoneNumber}>{contact.phoneNumbers[0].number}</Text>
-                            </View>
+                                <View style={styles.phone}>
+                                    <Feather name="phone" size={18} color={theme.colors.gray_400}></Feather>
+                                    <Text style={styles.phoneNumber}>{contact.phoneNumbers[0].number}</Text>
+                                </View>
                             )
                         }
+                        <Button title='Fechar' onPress={handleBottomSheetClose} />
                         </View>
                     </BottomSheet>
                     

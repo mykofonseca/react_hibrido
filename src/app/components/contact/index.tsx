@@ -16,7 +16,7 @@ export function Contact({ contact, ...rest} : Props)
 {
     return <TouchableOpacity style={styles.container}
     >
-        <Avatar name="Maykola" image={contact.image} />
+        <Avatar name={contact.name} image={contact.image} />
         <Text style={styles.name}>{contact.name}</Text>
     </TouchableOpacity>
 }
