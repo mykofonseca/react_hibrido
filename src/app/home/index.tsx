@@ -9,7 +9,7 @@ import * as Contacts from 'expo-contacts'
 
 type SectionListDataProps = {
     title: string
-    data: ContactProps
+    data: ContactProps[]
 }
 export function Home() {
     const [ name, setName] = useState("")
