@@ -32,4 +32,4 @@ export function Avatar({ image, name, variant="medium" }:Props){
             )}
     </View>
     )
-}
+} 
